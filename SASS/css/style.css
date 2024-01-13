@@ -1,52 +1,95 @@
-.formulario {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.formulario p {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.input-wrapper {
-  position: relative;
-  margin-bottom: 15px;
-}
-
-.input-wrapper input {
+.contenedor {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
+  height: 100vh;
+  background-color: #d0d0d0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form-content {
+  width: 100%;
+  max-width: 450px;
+  background-color: #2c2f35;
+  padding: 50px 60px 70px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.form-content h1 {
+  font-size: 30px;
+  margin-bottom: 60px;
+  color: white;
+  position: relative;
+}
+
+.form-content h1::after {
+  content: "";
+  width: 30px;
+  height: 4px;
+  border-radius: 3px;
+  background: #FFBE58;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.input-field {
+  margin: 15px 0;
   border-radius: 5px;
+  background-color: #515966;
+  overflow: hidden;
+}
+
+input {
+  background: transparent;
+  border: 0;
+  outline: none;
+  padding: 18px 15px;
+}
+
+.input::-webkit-input-placeholder {
+  color: red;
+}
+
+.input::-moz-placeholder {
+  color: red;
+}
+
+.input:-ms-input-placeholder {
+  color: red;
+}
+
+.input::-ms-input-placeholder {
+  color: red;
+}
+
+.input::placeholder {
+  color: red;
+}
+
+.input-field i {
+  color: #FFBE58;
+}
+
+.btn-field button {
+  background-color: #FFBE58;
+  color: white;
+  border-radius: 18%;
+  margin-top: 22px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-.input-icon {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.btn {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.btn:hover {
-  background-color: #0056b3;
 }

@@ -12,8 +12,7 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-
-.form-content {
+.contenedor .form-content {
   width: 100%;
   max-width: 450px;
   background-color: #2c2f35;
@@ -21,15 +20,13 @@
   text-align: center;
   border-radius: 25px;
 }
-
-.form-content h1 {
+.contenedor .form-content h1 {
   font-size: 30px;
   margin-bottom: 60px;
   color: white;
   position: relative;
 }
-
-.form-content h1::after {
+.contenedor .form-content h1::after {
   content: "";
   width: 30px;
   height: 4px;
@@ -41,53 +38,43 @@
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-
-.input-field {
+.contenedor .form-content .input-field {
   margin: 15px 0;
   border-radius: 5px;
   background-color: #515966;
   overflow: hidden;
 }
-
-input {
+.contenedor .form-content .input-field input {
   background: transparent;
   border: 0;
   outline: none;
   padding: 18px 15px;
 }
-
-.input::-webkit-input-placeholder {
-  color: red;
+.contenedor .form-content .input-field input::-webkit-input-placeholder {
+  color: white;
 }
-
-.input::-moz-placeholder {
-  color: red;
+.contenedor .form-content .input-field input::-moz-placeholder {
+  color: white;
 }
-
-.input:-ms-input-placeholder {
-  color: red;
+.contenedor .form-content .input-field input:-ms-input-placeholder {
+  color: white;
 }
-
-.input::-ms-input-placeholder {
-  color: red;
+.contenedor .form-content .input-field input::-ms-input-placeholder {
+  color: white;
 }
-
-.input::placeholder {
-  color: red;
+.contenedor .form-content .input-field input::placeholder {
+  color: white;
 }
-
-.input-field i {
+.contenedor .form-content .input-field i {
   color: #FFBE58;
 }
-
-.btn-field button {
+.contenedor .form-content .btn-field button {
   background-color: #FFBE58;
   color: white;
   border-radius: 18%;
   margin-top: 22px;
 }
-
-.warnings {
+.contenedor .form-content .warnings {
   width: 200px;
   text-align: center;
   margin: auto;

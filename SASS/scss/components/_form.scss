@@ -1,74 +1,79 @@
-.contenedor {
+@mixin form-styling {
     width: 100%;
     height: 100vh;
     background-color: #d0d0d0;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .form-content {
+        width: 100%;
+        max-width: 450px;
+        background-color: #2c2f35;
+        padding: 50px 60px 70px;
+        text-align: center;
+        border-radius: 25px;
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 60px;
+            color: #ffff;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 30px;
+                height: 4px;
+                border-radius: 3px;
+                background: #FFBE58;
+                position: absolute;
+                bottom: -12px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .input-field {
+            margin: 15px 0;
+            border-radius: 5px;
+            background-color: #515966;
+            overflow: hidden;
+
+            input {
+                background: transparent;
+                border: 0;
+                outline: none;
+                padding: 18px 15px;
+
+                &::placeholder {
+                    color: #ffff;
+                }
+            }
+
+            i {
+                color: #FFBE58;
+            }
+        }
+
+        .btn-field {
+            button {
+                background-color: #FFBE58;
+                color: #ffff;
+                border-radius: 18%;
+                margin-top: 22px;
+            }
+        }
+
+        .warnings {
+            width: 200px;
+            text-align: center;
+            margin: auto;
+            color: red;
+            padding-top: 20px;
+        }
+    }
 }
 
-.form-content {
-    width: 100%;
-    max-width: 450px;
-    background-color: #2c2f35;
-    padding: 50px 60px 70px;
-    text-align: center;
-    border-radius: 25px;
-}
-
-
-
-.form-content h1 {
-    font-size: 30px;
-    margin-bottom: 60px;
-    color: #ffff;
-    position: relative;
-}
-
-.form-content h1::after{
-    content: '';
-    width: 30px;
-    height: 4px;
-    border-radius: 3px;
-    background:  #FFBE58;
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.input-field{
-    margin: 15px 0;
-    border-radius: 5px;
-    background-color: #515966;
-    overflow: hidden;
-}
-input{
-    background: transparent;
-    border: 0;
-    outline: none;
-    padding: 18px 15px;
-
-}
-
-.input::placeholder{
-    color: red;
-}
-.input-field i{
-    color:  #FFBE58;;
-}
-
-.btn-field button{
-    background-color: #FFBE58;
-    color: #ffff;
-    border-radius: 18%;
-    margin-top: 22px;
-   
-}
-
-.warnings{
-    width: 200px;
-    text-align: center;
-    margin: auto;
-    color: red;
-    padding-top: 20px;
+.contenedor {
+    @include form-styling;
 }

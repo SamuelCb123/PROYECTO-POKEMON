@@ -25,4 +25,34 @@
     } else {
         console.error('No hay elemento año.');
     }
-;
+
+
+   //creamos una funcion para obtener la estacion actual atraves del mes 
+    function getestacionactual() {
+        let ahora = new Date();//obtenemos la fecha actual
+        let mes = ahora.getMonth() + 1; //en js los meses van del 0 al 11 por eso le sumamos un +1 
+    
+        if (mes >= 3 && mes <= 5) { //determinacion de la estacion segun en el mes que se este
+            return 'primavera';
+        } else if (mes >= 6 && mes <= 8) {
+            return 'verano';
+        } else if (mes >= 9 && mes <= 11) {
+            return 'otoño';
+        } else {
+            return 'invierno';
+        }
+    }
+    
+    function cambiarcolores() {//funcion para cambiar el color de las tarjetas segun en la estacion en la que nos encontremos
+        let estacion = getestacionactual();//obtencion de la estacion actual
+        let cards = document.querySelectorAll('.card');//seleccionamos todas las tarjeta con clard
+        
+        cards.forEach(card => {
+           
+            card.classList.add(estacion);
+        }); 
+    }
+    
+    window.onload = cambiarcolores;
+    
+

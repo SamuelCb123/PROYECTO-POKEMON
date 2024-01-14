@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="BOOSTRAPT/bootstrap.css">
   <link rel="stylesheet" href="SASS/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+  <script defer src="validacion.js"></script>
 </head>
 <script defer src="script1.js"></script>
+
 <script defer src="BOOSTRAPT/bootstrap.bundle.js"></script>
 <body>
     <header class="p-3 bg-dark text-white">
@@ -35,37 +36,41 @@
       </header>
       <div class="contenedor">
         <div class="form-content">
-          <h1 class="title">Registro</h1>
-          <form>
-              <div class="input-field" id="nameInput">
-                  <i class="fa-solid fa-user"></i>
-                  <input type="text" placeholder="name">
-              </div>
-      
-              <div class="input-field">
-                  <i class="fa-solid fa-user"></i>
-                  <input type="text" placeholder="subname">
-              </div>
-      
-              <div class="input-field">
-                  <i class="fa-solid fa-envelope"></i>
-                  <input type="email" placeholder="correo">
-              </div>
-      
-              <div class="input-field">
-                  <i class="fa-solid fa-lock"></i>
-                  <input id="pass" type="password" placeholder="password">
-                  <input id="check" type="checkbox">
-              </div>
-      
-              <div class="btn-field">
-                  <button id="registro" type="button">Registrarse</button>
-              </div>
-          </form>
+            <h1 class="title">Registro</h1>
+            <form>
+                <div class="input-field" id="nameInput">
+                    <i class="fa-solid fa-user"></i>
+                    <input id="name" type="text" placeholder="name" required>
+                </div>
+    
+                <div class="input-field">
+                    <i class="fa-solid fa-user"></i>
+                    <input id="subname" type="text" placeholder="subname" required>
+                </div>
+    
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input id="email" type="email" placeholder="correo" required>
+                </div>
+    
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input id="pass" type="password" placeholder="password" required>
+                    <input id="check" type="checkbox">
+                </div>
+    
+                <div class="btn-field">
+                    <p class="warnings" id="warnings"></p>
+                    <button id="registro" type="submit">Registrarse</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
       </div>
       
     
-      
+     
       
 </body>
 </html>

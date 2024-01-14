@@ -1,11 +1,8 @@
 "use strict";
 
-document.addEventListener('DOMContentLoaded', function() {
-    
     let check = document.getElementById("check");
     let pass = document.getElementById("pass");
-    let registroButton = document.getElementById('registro');
-    let iniciarsesion = document.getElementById('iniciarsesion');
+   
     let año = document.getElementById("año");
 
     if (check && pass) {
@@ -20,22 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    if (registroButton) {
-        registroButton.addEventListener('click', function() {
-            window.location.href = 'iniciarsesion.html';
-        });
-    } else {
-        console.error('No hay elemento registro.');
-    }
-
-    if (iniciarsesion) {
-        iniciarsesion.addEventListener('click', function() {
-            window.location.href = 'perfil.html';
-        });
-    } else {
-        console.error('No hay elemento iniciarsesion.');
-    }
-
+   
     let añoActual = new Date().getFullYear();
 
     if (año) {
@@ -43,4 +25,4 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('No hay elemento año.');
     }
-});
+;

@@ -29,10 +29,10 @@ form.addEventListener("submit", e => {
     }
 
     if (warnings === "") {
-        // If there are no warnings, redirect to "iniciarsesion.html"
+        
         window.location.href = 'iniciarsesion.html';
     } else {
-        // If there are warnings, display them in the "parrafo" element
+        
         parrafo.innerHTML = warnings;
     }
 });

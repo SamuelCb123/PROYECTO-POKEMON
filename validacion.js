@@ -29,10 +29,10 @@ form.addEventListener("submit", e => {
     }
 
     if (warnings === "") {
-
+  
         window.location.href = 'iniciarsesion.html';
     } else {
-   
+     
         parrafo.innerHTML = warnings;
     }
 });

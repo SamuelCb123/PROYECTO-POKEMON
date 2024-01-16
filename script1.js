@@ -46,13 +46,19 @@
     function cambiarcolores() {//funcion para cambiar el color de las tarjetas segun en la estacion en la que nos encontremos
         let estacion = getestacionactual();//obtencion de la estacion actual
         let cards = document.querySelectorAll('.card');//seleccionamos todas las tarjeta con clard
-        
+       // Para cada tarjeta actualiza las clases de estación
         cards.forEach(card => {
            
             card.classList.add(estacion);
         }); 
     }
-    
+    //la funcion se activa cuando se ha cargado la página entera
     window.onload = cambiarcolores;
     
 
+    
+    function toggleMenu() {
+        var menu = document.getElementById("menuBar");
+        menu.classList.toggle("active");
+    }
+    

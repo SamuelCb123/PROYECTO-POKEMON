@@ -1,9 +1,17 @@
-@use "components/form";
+@use "components/form.scss";
 @use "components/cards.scss";
+@use "components/menu";
 .sobrenosotros {
     background-color: #f0f0f0;
   }
   .poke{
     width: 800px;
     height: auto;
+  }
+  .bg-pink{
+    background-color: #ff69b4;
+  }
+  .bg-purple{
+    background-color: #4B0082
+    ;
   }

@@ -58,7 +58,27 @@
 
     
     function toggleMenu() {
-        var menu = document.getElementById("menuBar");
+        let menu = document.getElementById("menuBar");
         menu.classList.toggle("active");
     }
     
+
+    let carousel = document.querySelector('.carousel');
+let inner = document.querySelector('.carousel-inner');
+let prev = document.querySelector('.carousel-prev'); 
+let next = document.querySelector('.carousel-next'); 
+let imgwidth = document.querySelector('img').clientWidth;
+
+let currentIndex = 0;
+prev.addEventListener('click', (event) => {
+    event.preventDefault();
+    currentIndex = Math.max(currentIndex - 1, 0);
+    inner.style.transform = `translateX(-${currentIndex * imgwidth}px)`; 
+});
+
+next.addEventListener('click', (event) => {
+    event.preventDefault();
+    currentIndex = Math.min(currentIndex + 1, inner.childElementCount - 1); 
+    inner.style.transform = `translateX(-${currentIndex * imgwidth}px)`; 
+});
+

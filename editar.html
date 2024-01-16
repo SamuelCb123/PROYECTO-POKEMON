@@ -8,24 +8,24 @@
     <link rel="stylesheet" href="SASS/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<script defer src="general.js"></script>
+<script defer src="JS/general.js"></script>
 <script defer src="BOOSTRAPT/bootstrap.bundle.js"></script>
 <body>
   
     <header class="Tituloosm">       
         <div class="barra">
-            <h2>Proyecto Pokemon<img src="lista_icono.png" alt=""></h2>
+            <h2>Proyecto Pokemon<img src="IMG/lista_icono.png" alt=""></h2>
             
             <ul>
                 <li><a href="perfil.html">Tabla completa</a></li>
-                <li><a href="contacto.html">Crear pokemon</a></li>
-                <li ><a href="">Editar y Borrar Pokemons</a></li>   
-                <li><a href="">Salir</a></li>
+                <li><a href="crearpokemon.html">Crear pokemon</a></li>
+                <li ><a href="editar.html">Editar y Borrar Pokemons</a></li>   
+                <li><a href="inicio.html">Salir</a></li>
             </ul>
            
         </div> 
     </header>
-    <div class="tabla" id="yokais">
+    <div class="tabla" >
         <h2 class="text-center">Pokemons</h2>
         <div class="container table-responsive">
             <table class="table border border-2 align-middle mb-0 table-hover">
@@ -50,7 +50,7 @@
                             </div>
                         </td>
                         <td class="img-container">
-                            <img src="darkrai.png" class="img-fluid " width="100px">
+                            <img src="IMG/darkrai.png" class="img-fluid " width="100px">
                         </td>
                         <td>
                             <span class="badge bg-dark">Siniestro</span>
@@ -59,7 +59,7 @@
                         <td>
                             <p class="fw-normal mb-1">Sinnoh,Tesselia,Kalos,Alola,Galar</p>
                         </td>
-                        <td>    <a href="tu_enlace_de_edicion">
+                        <td>    <a href="modificar.html">
                            
                             <button class="editar"  >Editar</button></td>
                         <td><button class="eliminar"  onclick="eliminarFila(this)" >Eliminar</button></td></td>
@@ -73,14 +73,14 @@
                             </div>
                         </td>
                         <td>
-                           <img class="img-fluid" src="wigglytuff.png" width="100px">
+                           <img class="img-fluid" src="IMG/wigglytuff.png" width="100px">
                         </td>
                         <td>
                             <span class="badge bg-pink">Hada</span>
                         </td>
                         <td><span class="badge bg-dark">Normal</span></td>
                         <td>Kanto,Johto,Hoenn,Sinnoh,Teselia,Kalos,Alola,Galar</td>
-                        <td>    <a href="tu_enlace_de_edicion">
+                        <td>    <a href="modificar.html">
                            
                             <button class="editar"  >Editar</button></td>
                         <td><button class="eliminar"  onclick="eliminarFila(this)" >Eliminar</button></td></td>
@@ -94,14 +94,14 @@
                             </div>
                         </td>
                         <td>
-                            <img class="img-fluid" src="blastoise.png" width="100px">
+                            <img class="img-fluid" src="IMG/blastoise.png" width="100px">
                         </td>
                         <td>
                             <span class="badge bg-info">Agua</span>
                         </td>
                         <td>No tiene</td>
                         <td>Kanto,Johto,Hoenn,Sinnoh,Teselia,Kalos,Alola,Galar</td>
-                        <td>    <a href="tu_enlace_de_edicion">
+                        <td>    <a href="modificar.html">
                            
                             <button class="editar"  >Editar</button></td>
                         <td><button class="eliminar"  onclick="eliminarFila(this)" >Eliminar</button></td></td>
@@ -115,7 +115,7 @@
                             </div>
                         </td>
                         <td>
-                            <img src="haunter.png" class="img-fluid" width="100px">
+                            <img src="IMG/haunter.png" class="img-fluid" width="100px">
                         </td>
                         <td>
                             <span class="badge bg-purple">Fantasma</span>
@@ -124,7 +124,7 @@
                             <span class="badge bg-purple">Veneno</span> 
                         </td>
                         <td>Kanto,Johto,Hoenn,Sinnoh,Teselia,Kalos,Alola,Gala</td>
-                        <td>    <a href="tu_enlace_de_edicion">
+                        <td>    <a href="modificar.html">
                            
                             <button class="editar"  >Editar</button></td>
                         <td><button class="eliminar"  onclick="eliminarFila(this)" >Eliminar</button></td></td>
@@ -139,7 +139,7 @@
                             </div>
                         </td>
                         <td>
-                            <img class="img-fluid" src="arcanine.png" width="100px">
+                            <img class="img-fluid" src="IMG/arcanine.png" width="100px">
                         </td>
                         <td>
                             <span class="badge bg-danger">Fuego</span>
@@ -147,7 +147,7 @@
                         <td>No tiene</td>
                         <td>Kanto,Johto,Hoenn,Sinnoh,Teselia,Kalos,Alola,Galar</td>
                         <td>
-                            <a href="tu_enlace_de_edicion">
+                            <a href="modificar.html">
                            
                             <button class="editar"  >Editar</button></td>
                         <td><button class="eliminar"  onclick="eliminarFila(this)" >Eliminar</button></td>

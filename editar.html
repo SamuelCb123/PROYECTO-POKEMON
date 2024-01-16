@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="BOOSTRAPT/bootstrap.css">
+    <link rel="stylesheet" href="SASS/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<script defer src="general.js"></script>
+<script defer src="BOOSTRAPT/bootstrap.bundle.js"></script>
+<body>
+  
+    <header class="Tituloosm">       
+        <div class="barra">
+            <h2>Proyecto Pokemon<img src="lista_icono.png" alt=""></h2>
+            
+            <ul>
+                <li><a href="perfil.html">Tabla completa</a></li>
+                <li><a href="contacto.html">Crear pokemon</a></li>
+                <li ><a href="">Editar y Borrar Pokemons</a></li>   
+                <li><a href="">Salir</a></li>
+            </ul>
+           
+        </div> 
+    </header>
+    <div class="tabla" id="yokais">
+        <h2 class="text-center">Pokemons</h2>
+        <div class="container table-responsive">
+            <table class="table border border-2 align-middle mb-0 table-hover">
+                <thead class="bg-light">
+                    <tr>
+                        <th>Name</th>
+                        <th>Imagen</th>
+                        <th>Type</th>
+                        <th>Subtype</th>
+                        <th>Region</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                    <p class="fw-bold mb-1">Darkrai</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="img-container">
+                            <img src="darkrai.png" class="img-fluid " width="100px">
+                        </td>
+                        <td>
+                            <span class="badge bg-dark">Siniestro</span>
+                        </td>
+                        <td>No tiene</td>
+                        <td>
+                            <p class="fw-normal mb-1">Sinnoh,Tesselia,Kalos,Alola,Galar</p>
+                        </td>
+                        <td>    <a href="tu_enlace_de_edicion">
+                           
+                            <button class="editar"  >Editar</button></td>
+                        <td><button class="eliminar"  onclick="eliminarFila(this)" >Eliminar</button></td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                    <p class="fw-bold mb-1">Wigglytuff</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                           <img class="img-fluid" src="wigglytuff.png" width="100px">
+                        </td>
+                        <td>
+                            <span class="badge bg-pink">Hada</span>
+                        </td>
+                        <td><span class="badge bg-dark">Normal</span></td>
+                        <td>Kanto,Johto,Hoenn,Sinnoh,Teselia,Kalos,Alola,Galar</td>
+                        <td>    <a href="tu_enlace_de_edicion">
+                           
+                            <button class="editar"  >Editar</button></td>
+                        <td><button class="eliminar"  onclick="eliminarFila(this)" >Eliminar</button></td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                    <p class="fw-bold mb-1">Blastoise</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <img class="img-fluid" src="blastoise.png" width="100px">
+                        </td>
+                        <td>
+                            <span class="badge bg-info">Agua</span>
+                        </td>
+                        <td>No tiene</td>
+                        <td>Kanto,Johto,Hoenn,Sinnoh,Teselia,Kalos,Alola,Galar</td>
+                        <td>    <a href="tu_enlace_de_edicion">
+                           
+                            <button class="editar"  >Editar</button></td>
+                        <td><button class="eliminar"  onclick="eliminarFila(this)" >Eliminar</button></td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                    <p class="fw-bold mb-1">Haunter</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="haunter.png" class="img-fluid" width="100px">
+                        </td>
+                        <td>
+                            <span class="badge bg-purple">Fantasma</span>
+                        </td>
+                        <td>
+                            <span class="badge bg-purple">Veneno</span> 
+                        </td>
+                        <td>Kanto,Johto,Hoenn,Sinnoh,Teselia,Kalos,Alola,Gala</td>
+                        <td>    <a href="tu_enlace_de_edicion">
+                           
+                            <button class="editar"  >Editar</button></td>
+                        <td><button class="eliminar"  onclick="eliminarFila(this)" >Eliminar</button></td></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                                    <p class="fw-bold mb-1">Arcanine</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <img class="img-fluid" src="arcanine.png" width="100px">
+                        </td>
+                        <td>
+                            <span class="badge bg-danger">Fuego</span>
+                        </td>
+                        <td>No tiene</td>
+                        <td>Kanto,Johto,Hoenn,Sinnoh,Teselia,Kalos,Alola,Galar</td>
+                        <td>
+                            <a href="tu_enlace_de_edicion">
+                           
+                            <button class="editar"  >Editar</button></td>
+                        <td><button class="eliminar"  onclick="eliminarFila(this)" >Eliminar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+  

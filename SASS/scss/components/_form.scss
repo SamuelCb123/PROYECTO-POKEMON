@@ -1,9 +1,9 @@
-
+@use "_variablescolores.scss";
 
 @mixin form-styling {
     width: 100%;
     height: 100vh;
-    background-color: #d0d0d0;
+    background-color: $colorfondo;
     display: flex;
     align-items: center;
     justify-content: center;

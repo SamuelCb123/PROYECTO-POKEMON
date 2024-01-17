@@ -180,64 +180,74 @@ body {
   }
 }
 
-.carousel {
+.container-carousel {
   position: relative;
   width: 500px;
-  margin-inline: auto;
+  height: 300px;
+  background-color: #e0e0e0;
+  -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+  border-radius: 15px;
   overflow: hidden;
 }
 
-.carousel-inner {
+.carruseles {
+  width: 1000%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-  transition: -webkit-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
-  padding-left: 0;
 }
 
-.carousel img {
+.slider-section {
+  width: 10%;
+  height: 100%;
+}
+
+.slider-section img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
 }
 
-.carousel-prev,
-.carousel-next {
+.btn-left,
+.btn-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-size: 30px;
-  height: 30px;
-  color: white;
-  text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  font-size: 1.5rem;
+  background-color: transparent;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5058823529);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-.carousel-next {
-  right: 10px;
+.btn-left:hover,
+.btn-right:hover {
+  background-color: rgba(51, 51, 51, 0.831372549);
+  color: #fff;
 }
 
-.carousel-prev {
+.btn-left {
   left: 10px;
 }
 
-.carousel-next:hover,
-.carousel-prev:hover {
-  background-color: rgba(0, 0, 0, 0.6);
+.btn-right {
+  right: 10px;
 }
 
 .sobrenosotros {

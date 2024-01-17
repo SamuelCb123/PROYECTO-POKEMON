@@ -50,6 +50,7 @@
   border: 0;
   outline: none;
   padding: 18px 15px;
+  color: white;
 }
 .contenedor .form-content .input-field input::-webkit-input-placeholder {
   color: white;
@@ -72,7 +73,7 @@
 .contenedor .form-content .btn-field button {
   background-color: #FFBE58;
   color: white;
-  border-radius: 18%;
+  border-radius: 20px;
   margin-top: 22px;
 }
 .contenedor .form-content .warnings {

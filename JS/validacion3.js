@@ -35,6 +35,10 @@ form.addEventListener("submit", e => {
         warningsText += `La región es demasiado corta <br>`;
     }
 
+    if (type.value === type2.value) {
+        warningsText += `Los tipos seleccionados en "Tipo" y "Tipo 2" no pueden ser iguales <br>`;
+    }
+
     if (warningsText === "") {
         // All validation passed, show alert
         alert("Pokemon creado");

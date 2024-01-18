@@ -1,6 +1,6 @@
 "use strict";
 
-let registroButton = document.getElementById('registro');//accede a los elementos con el id asignado
+let registroButton = document.getElementById('registro');//accede a los elementos con el id asignados
 let iniciarsesion = document.getElementById('iniciarsesion');
 
 

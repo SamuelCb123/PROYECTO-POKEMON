@@ -18,7 +18,7 @@ form.addEventListener("submit", e => {//inicializa el evento cuando se pulsa el 
 
    
 
-    if (contraseña.value.length < 3) {
+    if (contraseña.value.length < 3) {   
         warnings += `La contraseña es demasiado corta<br>`;
     }
 

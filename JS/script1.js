@@ -3,7 +3,7 @@
     let check = document.getElementById("check");
     let pass = document.getElementById("pass");
    
-    let año = document.getElementById("año");
+    
 
     if (check && pass) {
         check.onclick = togglePassword;
@@ -17,7 +17,7 @@
         }
     }
 
-   
+    let año = document.getElementById("año");
     let añoActual = new Date().getFullYear();
 
     if (año) {
@@ -89,8 +89,8 @@
       });
     
       track.addEventListener("scroll", () => {
-        const trackScrollWidth = track.scrollWidth;
-        const trackOuterWidth = track.clientWidth;
+        let trackScrollWidth = track.scrollWidth;
+        let trackOuterWidth = track.clientWidth;
     
         prev.removeAttribute("disabled");
         next.removeAttribute("disabled");

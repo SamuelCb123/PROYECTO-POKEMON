@@ -1,6 +1,6 @@
 "use strict";
-
-const form = document.getElementById('pokemon'); 
+ //formulario validacion crear pokemons
+let form = document.getElementById('pokemon'); 
 form.addEventListener("submit", e => {
     e.preventDefault();
 

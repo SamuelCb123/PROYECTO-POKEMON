@@ -1,12 +1,33 @@
-"use strict";
- //formulario validacion crear pokemons
+document.addEventListener('DOMContentLoaded', function () {
+    let type1 = document.getElementById('type');
+    let type2 = document.getElementById('type2');
+
+    type1.addEventListener('change', function () { //
+        // Establece un event listener para el evento change en el elemento type1
+        let seleccionar = type1.value;// Obtiene el valor seleccionado en type1
+
+        for (let i = 0; i < type2.options.length; i++) {  // Habilita todas las opciones en type2
+            type2.options[i].disabled = false;
+        }
+        // Si se ha seleccionado un valor en type1
+        if (seleccionar !== "") {
+         
+          let opciones = type2.querySelector('option[value="' + seleccionar + '"]');
+            
+            if (opciones) {
+                opciones.disabled = true;
+            }
+        }
+    });
+});
+
+
 let form = document.getElementById('pokemon'); //accede al elemento llamado
 form.addEventListener("submit", e => {
     e.preventDefault(); //evento que se activa cuando se pulsa el boton
 
     let name = document.getElementById('name');
-    let type = document.getElementById('type'); //accedemos a cada uno de los inputs del formulario
-    let type2 = document.getElementById('type2');
+   
     let region = document.getElementById('region');
     let warnings = document.getElementById('warnings');
     let warningsText = "";
@@ -16,18 +37,11 @@ form.addEventListener("submit", e => {
     } else if (name.value.length < 3) {
         warningsText += `El nombre es demasiado corto <br>`;
     }
-
-    if (type.value.trim() === "") {
-        warningsText += `El campo "Tipo" no puede estar vacío <br>`;
-    } else if (type.value.length < 3) {
-        warningsText += `El tipo es demasiado corto <br>`;
+    else if (!/^[a-zA-Z]+$/.trim(nombre.value)) {
+        warnings += `El nombre solo debe contener letras <br>`;
     }
 
-    if (type2.value.trim() === "") {
-        warningsText += `El campo "Tipo 2" no puede estar vacío <br>`;
-    } else if (type2.value.length < 3) {
-        warningsText += `El tipo 2 es demasiado corto <br>`;
-    }
+ 
 
     if (region.value.trim() === "") { 
         warningsText += `El campo "Región" no puede estar vacío <br>`;
@@ -35,9 +49,7 @@ form.addEventListener("submit", e => {
         warningsText += `La región es demasiado corta <br>`;
     }
 
-    if (type.value === type2.value) {
-        warningsText += `Los tipos seleccionados en "Tipo" y "Tipo 2" no pueden ser iguales <br>`;
-    }
+ 
 
     if (warningsText === "") {
      
@@ -47,3 +59,4 @@ form.addEventListener("submit", e => {
         warnings.innerHTML = warningsText;
     }
 });
+

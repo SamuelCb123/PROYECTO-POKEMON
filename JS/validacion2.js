@@ -16,7 +16,9 @@ form.addEventListener("submit", e => {//inicializa el evento cuando se pulsa el 
         warnings += `El nombre es demasiado corto <br>`;//si el nombre introducido es menor a 3 caracteres devovlera 
     }
 
-   
+    if (!/^[a-zA-Z]+$/.test(nombre.value)) {
+        warnings += `El nombre solo debe contener letras <br>`;
+    }
 
     if (contraseña.value.length < 3) {   
         warnings += `La contraseña es demasiado corta<br>`;

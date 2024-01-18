@@ -19,7 +19,9 @@ form.addEventListener("submit", e => {
     if (nombre.value.length < 3) {
         warnings += `El nombre es demasiado corto <br>`; //condicional en el que si pone de los me
     }
-
+    if (!/^[a-zA-Z]+$/.test(nombre.value)) {
+        warnings += `El nombre solo debe contener letras <br>`;
+    }
     if (!caracteres.test(correo.value)) { //comprueba  si los campos introducidos en correo no coinciden con las expresiones regulares 
                                           // devolvera un mensaje 
         warnings += `El correo no es válido <br>`;

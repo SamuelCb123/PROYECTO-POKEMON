@@ -1,27 +1,27 @@
 "use strict";
 
-    let check = document.getElementById("check");
+    let check = document.getElementById("check"); //accede a 
     let pass = document.getElementById("pass");
    
     
 
-    if (check && pass) {
+    if (check && pass) { //comprueba si existen tanto check y pass si existe se le asignara la funcio togglepassword
         check.onclick = togglePassword;
     }
 
     function togglePassword() {
-        if (check.checked) {
+        if (check.checked) { //si se clicka en el en el checkbox mostrara el text de la contraseña(no estara oculta)
             pass.type = "text";
-        } else {
+        } else { //si no se oculta la contraseña permanecera oculta
             pass.type = "password";
         }
     }
 
     let año = document.getElementById("año");
-    let añoActual = new Date().getFullYear();
+    let añoActual = new Date().getFullYear();//obtencion del año actual
 
     if (año) {
-        año.textContent = añoActual;
+        año.textContent = añoActual;//si exite el año mostrara el año actualizado
     } else {
         console.error('No hay elemento año.');
     }
@@ -63,17 +63,17 @@
     }
     
 
-   let slider = document.querySelector("[data-slider]");
+   let slider = document.querySelector("[data-slider]"); //seleciona el elemento que tiene el slider
 
    let track = slider.querySelector("[data-slider-track]");
   let prev = slider.querySelector("[data-slider-prev]");
-  let next = slider.querySelector("[data-slider-next]");
+  let next = slider.querySelector("[data-slider-next]");   //elementos  dentro del slider
     
-    if (track) {
-      prev.addEventListener("click", () => {
-        next.removeAttribute("disabled");
+    if (track) { //condicional en el que si se encuentra el elemento track
+      prev.addEventListener("click", () => {//se configura el evento para 
+        next.removeAttribute("disabled");// Configuro el evento click para el botón previo
     
-        track.scrollTo({
+        track.scrollTo({ //desplazar el track
           left: track.scrollLeft - track.firstElementChild.offsetWidth,
           behavior: "smooth"
         });

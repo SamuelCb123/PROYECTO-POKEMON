@@ -1,11 +1,11 @@
 "use strict";
  //formulario validacion crear pokemons
-let form = document.getElementById('pokemon'); 
+let form = document.getElementById('pokemon'); //accede al elemento llamado
 form.addEventListener("submit", e => {
-    e.preventDefault();
+    e.preventDefault(); //evento que se activa cuando se pulsa el boton
 
     let name = document.getElementById('name');
-    let type = document.getElementById('type');
+    let type = document.getElementById('type'); //accedemos a cada uno de los inputs del formulario
     let type2 = document.getElementById('type2');
     let region = document.getElementById('region');
     let warnings = document.getElementById('warnings');
@@ -29,9 +29,9 @@ form.addEventListener("submit", e => {
         warningsText += `El tipo 2 es demasiado corto <br>`;
     }
 
-    if (region.value.trim() === "") {
+    if (region.value.trim() === "") { 
         warningsText += `El campo "Región" no puede estar vacío <br>`;
-    } else if (region.value.length < 3) {
+    } else if (region.value.length < 3) { //
         warningsText += `La región es demasiado corta <br>`;
     }
 
@@ -40,10 +40,10 @@ form.addEventListener("submit", e => {
     }
 
     if (warningsText === "") {
-        // All validation passed, show alert
-        alert("Pokemon creado");
+     
+        alert("Pokemon creado"); //si no tiene ningun errorr al pulsar el boton  saltara un alert con pokemon creado.
     } else {
-        // Display validation warnings
+      
         warnings.innerHTML = warningsText;
     }
 });

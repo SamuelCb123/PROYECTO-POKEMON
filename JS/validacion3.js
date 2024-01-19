@@ -37,9 +37,10 @@ form.addEventListener("submit", e => {
     } else if (name.value.length < 3) {
         warningsText += `El nombre es demasiado corto <br>`;
     }
-    else if (!/^[a-zA-Z]+$/.trim(nombre.value)) {
-        warnings += `El nombre solo debe contener letras <br>`;
+    else if (!/^[a-zA-Z]+$/.test(name.value.trim())) {
+        warningsText += `El nombre solo debe contener letras <br>`;
     }
+    
 
  
 
